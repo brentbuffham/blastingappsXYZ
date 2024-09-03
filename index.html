@@ -1,10 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta http-equiv="refresh" content="0;url=https://blastingapps.com">
+    <script type="text/javascript">
+        // Get the current URL path and query string
+        var path = window.location.pathname;
+        var query = window.location.search;
+
+        // Construct the new URL
+        var newUrl = "https://blastingapps.com" + path + query;
+
+        // Redirect to the new URL
+        window.location.href = newUrl;
+    </script>
     <title>Redirecting...</title>
 </head>
 <body>
-    <p>If you are not redirected automatically, follow this <a href="https://blastingapps.com">link to blastingapps.com</a>.</p>
+    <p>If you are not redirected automatically, follow this <a id="redirectLink" href="#">link to blastingapps.com</a>.</p>
+    <script type="text/javascript">
+        // Update the link href in case the redirect doesn't work automatically
+        document.getElementById("redirectLink").href = newUrl;
+    </script>
 </body>
 </html>
